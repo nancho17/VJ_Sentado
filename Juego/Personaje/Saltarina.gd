@@ -11,13 +11,8 @@ onready var animacion = $AnimatedSprite
 func _physics_process(delta):
 	movimiento.x = velocity.x * tomar_direccion()	
 
-	if not is_on_floor():
-		movimiento.y += acel_caida
-		movimiento.y = clamp(movimiento.y, -fuerza_salto , velocity.y)
-	if Input.is_action_just_pressed("salto") and is_on_floor():
-		movimiento.y = 0
-		movimiento.y -= fuerza_salto
-		print(movimiento)
+	caer()
+	saltar()
 	move_and_slide(movimiento, Vector2.UP)
 
 
@@ -25,5 +20,26 @@ func tomar_direccion():
 	var direccion = Input.get_action_strength("move_derecha") - Input.get_action_strength("move_izquierda")
 	if direccion == 0:
 		animacion.play("idle")
-
+	else :
+		if direccion < 0 :
+			animacion.flip_h = true
+		else :
+			animacion.flip_h = false
+		animacion.play("correr")
+	
 	return direccion
+
+func caer():
+	if not is_on_floor():
+		animacion.play("saltar")
+		movimiento.y += acel_caida
+		movimiento.y = clamp(movimiento.y, -fuerza_salto , velocity.y)
+pass
+
+func saltar():
+	if Input.is_action_just_pressed("salto") and is_on_floor():
+		animacion.play("saltar")
+		movimiento.y = 0
+		movimiento.y -= fuerza_salto
+		
+pass
