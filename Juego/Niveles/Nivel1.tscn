@@ -6,12 +6,12 @@
 [node name="Nivel1" type="Node2D"]
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( 484, 412 )
+position = Vector2( 448, 400 )
 acel_caida = 460
 velocity = Vector2( 300, 800 )
 
 [node name="PlataformaGrass" parent="." instance=ExtResource( 2 )]
-position = Vector2( 468, 448 )
+position = Vector2( 460, 544 )
 
 [node name="PlataformaGrass2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 800, 468 )
@@ -20,4 +20,16 @@ position = Vector2( 800, 468 )
 position = Vector2( 328, 488 )
 
 [node name="PlataformaGrass4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 612, 420 )
+position = Vector2( 620, 440 )
+
+[node name="PlataformaGrass5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1468, 504 )
+
+[node name="PlataformaGrass6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1296, 484 )
+
+[node name="PlataformaGrass7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1136, 484 )
+
+[node name="PlataformaGrass8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 972, 480 )

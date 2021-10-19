@@ -7,7 +7,7 @@ export var fuerza_salto = 3000
 var movimiento = Vector2.ZERO
 
 onready var animacion = $AnimatedSprite
-
+onready var audio_salto = $Audiosalto
 func _physics_process(delta):
 	movimiento.x = velocity.x * tomar_direccion()	
 
@@ -32,6 +32,7 @@ func tomar_direccion():
 func caer():
 	if not is_on_floor():
 		animacion.play("saltar")
+		
 		movimiento.y += acel_caida
 		movimiento.y = clamp(movimiento.y, -fuerza_salto , velocity.y)
 pass
@@ -39,6 +40,7 @@ pass
 func saltar():
 	if Input.is_action_just_pressed("salto") and is_on_floor():
 		animacion.play("saltar")
+		audio_salto.play()
 		movimiento.y = 0
 		movimiento.y -= fuerza_salto
 		

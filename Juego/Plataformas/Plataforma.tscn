@@ -3,16 +3,15 @@
 [ext_resource path="res://Assets/Environment/ground_grass.png" type="Texture" id=1]
 
 [node name="Plataforma" type="StaticBody2D"]
-position = Vector2( 428, 416 )
+position = Vector2( 440, 420 )
 scale = Vector2( 0.3, 0.3 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( -352.855, -471.979 )
-polygon = PoolVector2Array( 202.988, 435.712, 206.988, 431.712, 210.988, 431.712, 562.988, 431.712, 566.988, 431.712, 570.988, 435.712, 574.988, 443.712, 574.988, 459.712, 570.988, 467.712, 558.988, 487.712, 542.988, 507.712, 538.988, 507.712, 230.988, 519.712, 214.988, 491.712, 198.988, 451.712, 198.988, 443.712 )
+position = Vector2( -720, -493.333 )
+scale = Vector2( 1.95928, 1.05205 )
+polygon = PoolVector2Array( 183.741, 430.905, 197.351, 430.905, 210.961, 430.905, 571.638, 430.905, 578.443, 430.905, 585.248, 430.905, 585.248, 443.578, 578.443, 456.252, 571.638, 456.252, 571.638, 456.252, 571.638, 456.252, 551.222, 494.273, 551.222, 494.273, 551.222, 494.273, 551.222, 494.273, 538.988, 507.712, 230.988, 519.712, 214.988, 491.712, 204.156, 468.925, 190.546, 456.252 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 34.1334, 3.73352 )
+scale = Vector2( 2, 1 )
 texture = ExtResource( 1 )
