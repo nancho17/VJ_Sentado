@@ -5,11 +5,13 @@
 [node name="Plataforma" type="StaticBody2D"]
 position = Vector2( 440, 420 )
 scale = Vector2( 0.3, 0.3 )
+z_index = 40
+z_as_relative = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -720, -493.333 )
 scale = Vector2( 1.95928, 1.05205 )
-polygon = PoolVector2Array( 183.741, 430.905, 197.351, 430.905, 210.961, 430.905, 571.638, 430.905, 578.443, 430.905, 585.248, 430.905, 585.248, 443.578, 578.443, 456.252, 571.638, 456.252, 571.638, 456.252, 571.638, 456.252, 551.222, 494.273, 551.222, 494.273, 551.222, 494.273, 551.222, 494.273, 538.988, 507.712, 230.988, 519.712, 214.988, 491.712, 204.156, 468.925, 190.546, 456.252 )
+polygon = PoolVector2Array( 585.249, 430.904, 544.418, 506.946, 230.988, 519.712, 190.546, 430.904 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 34.1334, 3.73352 )

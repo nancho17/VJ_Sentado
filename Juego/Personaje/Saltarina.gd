@@ -8,9 +8,10 @@ var movimiento = Vector2.ZERO
 
 onready var animacion = $AnimatedSprite
 onready var audio_salto = $Audiosalto
+onready var camara = $Camera2D
 func _physics_process(delta):
 	movimiento.x = velocity.x * tomar_direccion()	
-
+	respawn()
 	caer()
 	saltar()
 	move_and_slide(movimiento, Vector2.UP)
@@ -45,3 +46,9 @@ func saltar():
 		movimiento.y -= fuerza_salto
 		
 pass
+
+func respawn():
+	if position.y > camara.limit_bottom:
+		get_tree().reload_current_scene()
+
+	pass
