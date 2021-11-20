@@ -11,7 +11,7 @@ onready var audio_salto = $Audiosalto
 onready var camara = $Camera2D
 func _physics_process(delta):
 	movimiento.x = velocity.x * tomar_direccion()	
-	respawn()
+	caida_al_vacio()
 	caer()
 	saltar()
 	move_and_slide(movimiento, Vector2.UP)
@@ -47,8 +47,9 @@ func saltar():
 		
 pass
 
-func respawn():
+func caida_al_vacio():
 	if position.y > camara.limit_bottom:
-		get_tree().reload_current_scene()
+		respawn()
 
-	pass
+func respawn():
+	get_tree().reload_current_scene()

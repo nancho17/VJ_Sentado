@@ -19,14 +19,14 @@ animations = [ {
 "name": "idle",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "correr",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "saltar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "correr",
 "speed": 5.0
 } ]
 
@@ -37,6 +37,8 @@ extents = Vector2( 42.285, 10 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 50
 z_as_relative = false
+collision_layer = 2
+collision_mask = 4
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -53,6 +55,7 @@ animation = "idle"
 
 [node name="Audiosalto" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -35.01
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
