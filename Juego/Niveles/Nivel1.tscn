@@ -13,23 +13,23 @@
 [node name="Nivel1" type="Node2D"]
 
 [node name="bg_layer1" type="Sprite" parent="."]
-position = Vector2( 1064, 504 )
+position = Vector2( 1122.83, 315.276 )
 scale = Vector2( 3.25488, 1.24316 )
 texture = ExtResource( 5 )
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( 592, 484 )
+position = Vector2( 595.901, 548.94 )
 acel_caida = 460
 velocity = Vector2( 300, 800 )
 
 [node name="Platalargas" type="Node2D" parent="."]
 
 [node name="PlataformaSnow" parent="Platalargas" instance=ExtResource( 3 )]
-position = Vector2( 792, 464 )
+position = Vector2( 789.753, 464 )
 z_index = 50
 
 [node name="PlataformaLarga" parent="Platalargas" instance=ExtResource( 2 )]
-position = Vector2( 1012, 588 )
+position = Vector2( 1018.61, 442.171 )
 z_index = 50
 
 [node name="PlataformaArena" parent="Platalargas" instance=ExtResource( 8 )]
@@ -37,7 +37,7 @@ position = Vector2( 360, 660 )
 z_index = 50
 
 [node name="Plataforma2" parent="Platalargas" instance=ExtResource( 7 )]
-position = Vector2( 1248, 588 )
+position = Vector2( 575.018, 436.036 )
 
 [node name="PlataformaSnow2" parent="Platalargas" instance=ExtResource( 3 )]
 position = Vector2( 1432, 468 )
@@ -60,7 +60,7 @@ z_index = 50
 [node name="Enemigos" type="Node2D" parent="."]
 
 [node name="Pinchon" parent="Enemigos" instance=ExtResource( 9 )]
-position = Vector2( 784, 320 )
+position = Vector2( 764.578, 368.297 )
 
 [node name="Pinchos" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1392, 456 )
