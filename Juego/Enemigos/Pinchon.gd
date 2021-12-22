@@ -22,7 +22,7 @@ func caminar():
 	if is_on_floor():
 		animacion.play("caminar")
 		detectar_colision()
-	movimiento.x = velocidad	
+		movimiento.x = velocidad	
 	pass
 
 func animar ():
